@@ -2,10 +2,10 @@
     border-radius: .5rem;
     box-shadow: 4px 4px 50px 1.5px greenyellow ;
     animation: shadow 11000ms  ease-in-out infinite;
-    margin-left: 39vw;
+    margin-left: 33vw;
     margin-top: 34vh;
     border:2px solid greenyellow;
-    width: 25vw;
+    width: 35vw;
     height: 40vh;
     background-color: transparent;
     backdrop-filter:blur(6px);

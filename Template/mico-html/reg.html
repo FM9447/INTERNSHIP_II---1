@@ -7,22 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body style="background: url('images/image.png');">
-    <div class="login" style="height: 84vh; margin-top: 9vh ;">
-        <form class="form" style="padding-left: .9vw;">
-            <label>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <div class="login" style="height: 102vh; margin-top: 4.5vh ;">
+        <form class="form" style="padding-left: .9vw; margin-top: 8vh;">
+            <label>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <input type="text" id="name" required><br><br><br>
-            <label>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <input type="gmail" id="gmail" required><br><br><br>
-            <label>Phone &nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label>Phone &nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <input type="tel" pattern="[0-9]{10}" id="phone" required><br><br><br>
-            <label>Address &nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label>Address &nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <input type="text" id="address" required><br><br><br>
-            <label>UserName &nbsp;&nbsp;:&nbsp;&nbsp;</label>
+            <label>UserName &nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <input type="text" id="username" required><br><br><br>
-            <label>Password&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</label>
+            <label>Password&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <input type="password" id="password" required><br><br><br>
-            <button type="submit" onclick="validation()">login</button>
-            <p id="demo"></p>
+            <label>Confirm Password&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="password" id="con_password" onchange="confirm()" style="margin-bottom: .1vh;"><br><br><br>
+            <p id="change" style="margin-top: .5vh;">&nbsp;</p>
+            <button type="submit" onclick="validation()">Sign UP</button>
+            <p id="demo">&nbsp;</p>
         </form>
     </div>
     <script>
@@ -37,6 +40,16 @@
             else{
                 document.getElementById("demo").innerHTML = "Invalid Otp";
                 alert("Invalid Otp")
+            }
+        }
+        function confirm(){
+            var pass = document.getElementById('password').value;
+            var conf = document.getElementById('con_password').value;
+            if (pass != conf){
+                document.getElementById("change").innerHTML = "Password Does Not Match";
+            }
+            else{
+                document.getElementById("change").innerHTML = "";
             }
         }
     </script>
