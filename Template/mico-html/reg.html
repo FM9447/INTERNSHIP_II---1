@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body style="background: url('images/image.png');">
-    <div class="login" style="height: 80vh; margin-top: 9vh ;">
+    <div class="login" style="height: 84vh; margin-top: 9vh ;">
         <form class="form" style="padding-left: .9vw;">
             <label>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <input type="text" id="name" required><br><br><br>
@@ -21,8 +21,24 @@
             <input type="text" id="username" required><br><br><br>
             <label>Password&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</label>
             <input type="password" id="password" required><br><br><br>
-            <button type="submit" onclick="window.location.assign('login.html')">login</button>
+            <button type="submit" onclick="validation()">login</button>
+            <p id="demo"></p>
         </form>
     </div>
+    <script>
+        function validation(){
+            var otp = prompt("Enter The Otp:");
+            if(otp == "")
+            {
+                document.getElementById("demo").innerHTML = "Otp Successfully Verified";
+                alert("User Successfully Created");
+                window.open('login.html');  
+            }
+            else{
+                document.getElementById("demo").innerHTML = "Invalid Otp";
+                alert("Invalid Otp")
+            }
+        }
+    </script>
 </body>
 </html>
