@@ -13,8 +13,27 @@
             <input type="text" id="username" required><br><br><br>
             <label>Password&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</label>
             <input type="password" id="password" required><br><br><br>
-            <button type="submit" onclick="window.location.assign('about-login.html')">login</button>
+            <button type="submit" onclick="validate()">login</button>
         </form>
     </div>
+    <script>
+        function validate(){
+            var user = document.getElementById('username').value;
+            var pass = document.getElementById('password').value;
+            if (user == 'FM' && pass == 9447)
+            {
+                alert("Login Successfull");
+                window.open("about-login.html");
+            }
+            else if (user == 'Prajitha.R' && pass == 9876)
+            {
+                alert("Login Successfull");
+                window.open("about-login.html");
+            }
+            else{
+                alert("Invalid Username Or Password");
+            }
+        }
+    </script>
 </body>
 </html>
